@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.AnimationActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+    <!-- 在此添加你的其他布局内容 -->
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="帧动画" />
+
+    <LinearLayout
+        android:id="@+id/ll_frame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView2"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/frame"
+        android:orientation="horizontal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="补间动画" />
+
+    <ImageView
+        android:id="@+id/iv_panda"
+        android:layout_width="1000px"
+        android:layout_height="1000px"
+        android:src="@drawable/img_panda" />
+    <TextView
+        android:id="@+id/tv_attribute_Animation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="属性动画" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PAG动画" />
+    <LinearLayout
+        android:id="@+id/ll_pag"
+        android:layout_width="1000px"
+        android:layout_height="1000px"
+        android:orientation="horizontal" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MP4动画" />
+    <TextureView
+        android:id="@+id/iv_mp4"
+        android:layout_width="1000px"
+        android:layout_height="1000px"
+        android:orientation="horizontal" />
+</LinearLayout>
+</ScrollView>

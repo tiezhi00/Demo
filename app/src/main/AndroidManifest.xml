@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_myworld"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_myworld"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="31">
+<!--        跳起舞来，我就是这条gay-->
+        <activity
+            android:name=".activity.AnimationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.WebViewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.HandlerActivity"
+            android:exported="false"
+            android:label="@string/title_activity_handler"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".activity.ListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.VehicleControlActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.VoiceSettingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.MusicActivity"
+            android:exported="false"
+            android:label="@string/title_activity_music"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
+        <activity
+            android:name=".activity.MainActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.SendBroadcastActivity"
+            android:exported="false"
+            android:label="@string/title_activity_send_broadcast"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+
+        <service android:name=".service.MusicService" />
+
+        <receiver
+            android:name=".broadcast.MyBroadcastReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.example.demo" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".MyWidget"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.AppWidgetProvider"
+                android:resource="@xml/setting_widget"></meta-data>
+        </receiver>
+    </application>
+
+</manifest>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="dimen_24sp">24sp</dimen>
+    <dimen name="dimen_5dp">5dp</dimen>
+    <dimen name="button_margin">16dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+</resources>
